@@ -65,7 +65,7 @@ export const shortcuts = [
     { category: "Object actions", action: "Subtract selection from active (booltools)", keys: ["Ctrl", "-"] },
 
     { category: "Edit Mode", action: "Toggle edit mode", keys: ["Tab ↹"] },
-    { category: "Edit Mode", action: "Vertx/edge/face", keys: ["1", "|", "2", "|", "3", "OR", "ICON_GROUP"],
+    { category: "Edit Mode", action: "Vertx|edge|face", keys: ["1", "|", "2", "|", "3", "OR", "ICON_GROUP"],
         icons: ["Icons/blender_icon_vertexsel.svg", 
         "Icons/blender_icon_edgesel.svg", 
         "Icons/blender_icon_facesel.svg",],
