@@ -44,6 +44,9 @@ export const shortcuts = [
         selected: 3,
     },
 
+    { category: "Windows and panels (3D view, ...)", action: "Show/hide tool shelf", keys: ["T"] },
+    { category: "Windows and panels (3D view, ...)", action: "Show/hide sidebar", keys: ["N"] },
+
     { category: "Object actions", action: "Rename active object", keys: ["F2"] },
     { category: "Object actions", action: "Translate (\"Grab\")", keys: ["G"] },
     { category: "Object actions", action: "Rotate", keys: ["R"] },
@@ -77,10 +80,6 @@ export const shortcuts = [
     { category: "Edit Mode", action: "Recalculate outside", keys: ["Shift", "N"] },
     { category: "Edit Mode", action: "Merge by distance", keys: ["M", "->", "By Distance"] },
     { category: "Edit Mode", action: "Select linked", keys: ["Ctrl", "L"] },
-
-    { category: "Windows and panels (3D view, ...)", action: "Show/hide tool shelf", keys: ["T"] },
-    { category: "Windows and panels (3D view, ...)", action: "Show/hide sidebar", keys: ["N"] },
-
 
     { category: "Selections", action: "Select single object/item", keys: ["Left Mouse"] },
     { category: "Selections", action: "Add object to selection", keys: ["Shift", "Left Mouse"] },
