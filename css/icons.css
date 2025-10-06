@@ -1,0 +1,125 @@
+
+/* === Mouse icon === */
+.mouse {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 30px;
+    border-radius: 14px;
+    background: transparent;
+}
+
+/* Horizontal separation line */
+.mouse::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 12px;
+    height: 2px;
+    background: #000000;
+    z-index: 6;
+}
+
+/* Vertical separation line */
+.mouse .vertical-line {
+    position: absolute;
+    top: 2px;
+    bottom: 16px;
+    left: 50%;
+    width: 2px;
+    background: #000000;
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+.mouse::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #2e2e2e;
+    border-radius: 14px;
+    pointer-events: none;
+    box-sizing: border-box;
+    z-index: 5;
+}
+
+.mouse-left,
+.mouse-right,
+.mouse-middle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 2px;
+}
+
+.mouse-left { border-radius: 14px 0 0 0; }
+.mouse-middle { left: 50%; width: 4px; transform: translate(-50%); }
+.mouse-right { border-radius: 0 14px 0 0; right: 0; }
+
+.mouse-text {
+    margin-left: 2px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    color: #f57900;
+}
+
+/* Highlighted button */
+.mouse .active {
+    background: #f57900;
+}
+
+/* === Icons === */
+.icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c2c2c;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Icon group container */
+.icon-group {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background-color: #2e2e2e;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Each icon inside the group */
+.icon-group .icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #525252;
+    border-radius: 0%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+/* SVG inside icon */
+.icon-group .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}

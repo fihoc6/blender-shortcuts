@@ -1,0 +1,43 @@
+/* === Layout === */
+#controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#search {
+    width: 250px;
+    padding: 8px;
+    font-size: 0.95rem;
+    border: 1px solid #555;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #000000;
+}
+
+#printBtn {
+    padding: 8px 14px;
+    border: none;
+    background: #f57900;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#printBtn:hover {
+    background: #e06f00;
+}
+
+#list {
+    column-count: 2;
+    column-gap: 2rem;
+}
+
+@media (max-width: 800px) {
+    #list {
+        column-count: 1;
+    }
+}

@@ -1,0 +1,60 @@
+/* === Shortcut Components === */
+.category {
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    padding-top: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+.category h2 {
+    border-bottom: 2px solid #f57900;
+    padding-bottom: 3px;
+    margin-bottom: 6px;
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.shortcut {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 5px;
+    margin-bottom: 6px;
+    border: 1px solid #444;
+}
+
+.action {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 3px;
+}
+
+.key {
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 2px 7px;
+    font-family: monospace;
+    font-size: 0.75rem;
+    min-width: 8px;
+    text-align: center;
+    color: #000000;
+    box-shadow: #000000 1px 1px 1px;
+}
+
+.plus {
+    padding: 0 3px;
+    color: #000000;
+    user-select: none;
+    font-size: 0.85rem;
+}

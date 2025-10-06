@@ -1,0 +1,120 @@
+
+/* Responsive */
+@media (max-width: 800px) {
+    #list {
+        column-count: 1;
+    }
+}
+
+/* === PRINT STYLES === */
+/* (Keep your existing @media print block here) */
+
+@media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+        max-width: none;
+        padding: 1rem;
+    }
+
+    #controls { display: none; }
+
+    #list {
+        column-count: 2 !important;
+        column-gap: 1.5rem !important;
+    }
+
+    .shortcut {
+        background: #ffffff;
+        color: black;
+        border: 1px solid rgb(0, 0, 0);
+    }
+
+    .key {
+        background: #ffffff;
+        border: 1px solid #5c5c5c;
+        color: black;
+    }
+
+    .category h2 {
+        border-bottom-color: 1px solid #f57900;
+        border-bottom-width: 1px;
+        color: #333;
+    }
+
+    /* Force mouse container and elements to show */
+    .mouse {
+        position: relative !important;
+        display: inline-block !important;
+        width: 20px !important;
+        height: 30px !important;
+    }
+
+    /* Outer border */
+    .mouse::after {
+        content: "" !important;
+        display: block !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        border: 2px solid #2e2e2e !important;
+        border-radius: 14px !important;
+        background: transparent !important;
+        z-index: 10 !important;
+    }
+
+    /* horizontal split line */
+    .mouse::before {
+        content: "" !important;
+        display: block !important;
+        position: absolute !important;
+        top: 12px !important;
+        left: 2px !important;
+        right: 2px !important;
+        height: 1px !important;
+        background: #000 !important;
+        z-index: 6 !important;
+    }
+
+    /* Vertical middle line */
+    .mouse .vertical-line {
+        content: "" !important;
+        display: block !important;
+        position: absolute !important;
+        top: 2px !important;
+        bottom: 18px !important;
+        left: 50% !important;
+        width: 1px !important;
+        background: #000 !important;
+        transform: translateX(-50%) !important;
+        z-index: 6 !important;
+    }
+
+    /* Mouse buttons */
+    .mouse-left,
+    .mouse-middle,
+    .mouse-right {
+        display: block !important;
+        position: absolute !important;
+        top: 2px !important;
+        background: #f57900 !important; /* highlight color for active buttons */
+        z-index: 0 !important;
+    }
+
+    .mouse-left { border-radius: 14px 0 0 0 !important; }
+    .mouse-middle { left: 50% !important; width: 3px !important; transform: translate(-50%) !important; }
+    .mouse-right { border-radius: 0 14px 0 0 !important; right: 0 !important; }
+
+    /* Mouse label */
+    .mouse-text {
+        color: #f57900 !important;
+        font-weight: 700 !important;
+    }
+}
